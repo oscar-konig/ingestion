@@ -1,0 +1,14 @@
+sources:
+  - name: dynamics_test
+    storage_account: oatlystorage
+    mount_point: /mnt/oatly_test_storage
+    container: lake
+    base_path: data/2022/03/01
+    file_structure: "table*"
+    tables:
+      - name: Ledger_ms
+        file_format: parquet
+        trigger_once: True
+      - name: coitem_ms
+        file_format: parquet
+        trigger_once: True
